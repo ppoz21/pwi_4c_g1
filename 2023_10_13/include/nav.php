@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link <?php if ($activePage === 'home'): echo 'active'; endif; ?>" href="/">Strona główna</a>
+                    <a class="nav-link <?php if ($activePage === 'home'): echo 'active'; endif; ?>" href="./">Strona główna</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if ($activePage === 'about'): echo 'active'; endif; ?>" href="/about-us.php">O nas</a>
+                    <a class="nav-link <?php if ($activePage === 'about'): echo 'active'; endif; ?>" href="./about-us.php">O nas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if ($activePage === 'contact'): echo 'active'; endif; ?>" href="/contact.php">Kontakt</a>
+                    <a class="nav-link <?php if ($activePage === 'contact'): echo 'active'; endif; ?>" href="./contact.php">Kontakt</a>
                 </li>
             </ul>
         </div>
