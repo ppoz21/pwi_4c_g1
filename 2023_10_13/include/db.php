@@ -25,7 +25,7 @@ $conn = new mysqli(
     '127.0.0.1',
     'php',
     'php',
-    '4bg1',
+    '4cg1',
     3306
 );
 
@@ -49,4 +49,24 @@ function storeMessage(string $email, string $message): bool
     $conn->close();
 
     return $result;
+}
+
+function findAdminById(string $login): ?array
+{
+    global $conn;
+
+    $sql = sprintf(
+        'SELECT * FROM admin WHERE login = "%s"',
+        $login
+    );
+
+    $result = $conn->query($sql);
+
+    if ($row = $result->fetch_assoc()) {
+        $result->free_result();
+
+        return $row;
+    }
+
+    return null;
 }
