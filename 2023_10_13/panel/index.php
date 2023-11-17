@@ -6,6 +6,10 @@ if (!isset($_SESSION['admin_name'])) {
     die;
 }
 
+require_once '../include/db.php';
+
+$messagesArr = getContactMessages();
+
 $title = 'Panel administracyjny';
 $activePage = 'home';
 ?>
@@ -21,7 +25,11 @@ require_once '../include/head.php';
     require_once './include/nav.php'
     ?>
     <div class="container py-5">
-        <h1>Hello panel</h1>
+        <h1>New contact messages</h1>
+        <?php
+        include_once './include/messagesTable.php';
+        include_once './include/messagesGrid.php';
+        ?>
     </div>
 </div>
 </body>
