@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tworzenie elementów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tworzenie elementów</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <form id="users-form">
+                <div class="form-group">
+                    <label for="name">Imię</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Nazwisko</label>
+                    <input type="text" id="surname" name="surname">
+                </div>
+                <div class="form-group">
+                    <label for="description">Opis</label>
+                    <textarea id="description" name="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Dodaj</button>
+                </div>
+            </form>
+        </div>
+        <div class="box">
+            <table>
+                <colgroup>
+                    <col style="width: 25%">
+                    <col style="width: 25%">
+                    <col style="width: 50%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Opis</th>
+                    </tr>
+                </thead>
+                <tbody id="users-holder"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
